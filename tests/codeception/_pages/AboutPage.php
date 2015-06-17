@@ -10,5 +10,5 @@ use yii\codeception\BasePage;
  */
 class AboutPage extends BasePage
 {
-    public $route = 'site/about';
+    public $route = 'demo/site/about';
 }

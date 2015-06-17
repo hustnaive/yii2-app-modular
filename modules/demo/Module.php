@@ -2,8 +2,8 @@
  /**
   * Module.php
   *
-  * @author        xiongzg
-  * @create_time	   2015-01-15 09:58
+  * @author        fangliang
+  * @create_time	   2015-06-16
   */
 
 namespace modules\demo;
@@ -11,12 +11,12 @@ namespace modules\demo;
 
 class Module extends \yii\base\Module
 {
+    public $layout = "main";
     public $controllerNamespace = 'modules\demo\controllers';
 
     public function init()
     {
         parent::init();
-        $this->setViewPath(__DIR__.'/views/');
-        $this->setLayoutPath(__DIR__.'/views/layouts/');
+        //do something init here
     }
 } 
