@@ -1,35 +1,37 @@
 Yii 2 模块化应用模板
 ============================
 
-这个项目是一个[Yii 2](http://www.yiiframework.com/)脚手架模板，用于创建模块化的web应用。
+这个项目是一个[Yii 2](http://www.yiiframework.com/)脚手架模板项目，用于快速创建模块化的Yii 2 Web应用。
 
-本模板基于[Yii 2 basic Project Template](https://github.com/yiisoft/yii2-app-basic)。
+本模板代码基于[Yii 2 Basic Project Template](https://github.com/yiisoft/yii2-app-basic)。
+
+如果你的Web应用很简单，你可以参考[Yii 2 Basic Project Template](https://github.com/yiisoft/yii2-app-basic)的指示操作。同样，如果你觉得本项目依然无法满足的需求，你的项目预计会有前后端分离，并且项目非常复杂时，你可以参考[Yii 2 Advanced Project Template](https://github.com/yiisoft/yii2-app-advanced)。
 
 目录结构
 -------------------
 	webroot/
-		|--- assets/
-		|--- commands/
-		|--- config/
-		|--- modules/
-		|		|--- demo/
+		|--- assets/					包含Assets的定义
+		|--- commands/					包含控制台命令
+		|--- config/					全局配置文件
+		|--- modules/					模块代码目录
+		|		|--- demo/				示例模块（demo）
 		|		|		|--- controllers/
 		|		|		|--- views/
 		|		|		|--- models/
-		|		|		|--- Module.php
+		|		|		|--- Module.php	模块初始化类
 		|		...
 		|--- mail/
 		|--- runtime/
 		|--- tests/
-		|--- vendor/
-		|--- web/
+		|--- vendor/					第三方扩展（初始化后才创建）
+		|--- web/						Web根目录，请将document root 配到此目录
 		|--- .gitignore
-		|--- composer.json
-		|--- composer.lock
+		|--- composer.json				composer依赖包
+		|--- composer.lock				composer生成的lock文件，以确定是否安装正确的依赖
 		...
 
 
-要求
+系统要求
 ------------
 
 同Yii2，最低要求PHP 5.4.0.
@@ -47,30 +49,25 @@ Yii 2 模块化应用模板
 	cd /path/to/basic
 	composer install
 
-如果你还没有安装[Composer](http://getcomposer.org/), 你需要先依照[Composer安装文档](http://docs.phpcomposer.com/00-intro.html#Installation-*nix)安装Composer。
+如果你还没有安装[Composer](http://www.phpcomposer.com/), 你需要先依照[Composer安装文档](http://docs.phpcomposer.com/00-intro.html#Installation-*nix)的指示安装Composer。
 
 然后，你可以在浏览器中输入如下URL访问示例了。
 
-~~~
-http://localhost/basic/web/
-~~~
-
+	http://localhost/basic/web/
 
 ### 通过Composer安装
 
 如果你已经安装了Composer，你可以通过执行如下命令安装:
 
-~~~
-cd /path/to/basic
-composer global require "fxp/composer-asset-plugin:~1.0.0"
-composer create-project --prefer-dist --stability=dev hustnaive/yii2-app-modular basic
-~~~
+	cd /path/to/webroot
+	composer global require "fxp/composer-asset-plugin:~1.0.0"
+	composer create-project --prefer-dist --stability=dev hustnaive/yii2-app-modular basic
 
 然后，你可以在浏览器中输入如下URL访问示例了。
 
-~~~
-http://localhost/basic/web/
-~~~
+
+	http://localhost/basic/web/
+
 
 
 配置
