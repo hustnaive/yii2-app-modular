@@ -1,5 +1,5 @@
 {
-    "name": "yiisoft/yii2-app-modular",
+    "name": "hustnaive/yii2-app-modular",
     "description": "Yii 2 modular Project Template",
     "keywords": ["yii2", "framework", "modular", "project template"],
     "homepage": "https://github.com/hustnaive/yii2-app-modular/",
@@ -8,7 +8,7 @@
     "support": {
         "issues": "https://github.com/hustnaive/yii2-app-modular/issues",
         "forum": "https://github.com/hustnaive/yii2-app-modular/issues",
-        "wiki": "http://www.yiiframework.com/wiki/",
+        "wiki": "https://github.com/hustnaive/yii2-app-modular/wiki",
         "irc": "irc://irc.freenode.net/yii",
         "source": "https://github.com/hustnaive/yii2-app-modular/"
     },
