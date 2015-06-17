@@ -118,7 +118,7 @@ tests就是框架默认创建的测试代码目录，里面有框架提供的一
 	Can't be on page "/index-test.php?r=site%2Fabout":
 	GuzzleHttp\Exception\ConnectException: cURL error 7: Failed to connect to localhost port 8080: Connection refused
 
-提示在8080端口连接拒绝，这里，我们需要修改一下配置文件:
+提示在xx端口连接拒绝，这里，我们需要修改一下配置文件:
 
 * 修改`basic/tests/codeception.yml`里面的`config/test_entry_url`配置，为你实际的项目入口地址
 * 修改`basic/tests/codeception/acceptance.suite.yml`里面的`modules/config/PhpBrowser`配置为你实际的地址
