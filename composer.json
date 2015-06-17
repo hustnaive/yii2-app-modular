@@ -1,16 +1,16 @@
 {
-    "name": "yiisoft/yii2-app-basic",
-    "description": "Yii 2 Basic Project Template",
-    "keywords": ["yii2", "framework", "basic", "project template"],
-    "homepage": "http://www.yiiframework.com/",
+    "name": "yiisoft/yii2-app-modular",
+    "description": "Yii 2 modular Project Template",
+    "keywords": ["yii2", "framework", "modular", "project template"],
+    "homepage": "https://github.com/hustnaive/yii2-app-modular/",
     "type": "project",
     "license": "BSD-3-Clause",
     "support": {
-        "issues": "https://github.com/yiisoft/yii2/issues?state=open",
-        "forum": "http://www.yiiframework.com/forum/",
+        "issues": "https://github.com/hustnaive/yii2-app-modular/issues",
+        "forum": "https://github.com/hustnaive/yii2-app-modular/issues",
         "wiki": "http://www.yiiframework.com/wiki/",
         "irc": "irc://irc.freenode.net/yii",
-        "source": "https://github.com/yiisoft/yii2"
+        "source": "https://github.com/hustnaive/yii2-app-modular/"
     },
     "minimum-stability": "stable",
     "require": {
