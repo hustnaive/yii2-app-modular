@@ -170,6 +170,9 @@ function getParams()
     return $params;
 }
 
+
+//callbacks, see $callbacks above
+
 function setWritable($root, $paths)
 {
     foreach ($paths as $writable) {

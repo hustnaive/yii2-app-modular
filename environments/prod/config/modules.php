@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'demo' =>[
-        'class'=>'modules\demo\Module',
-    ]
+//     'demo' =>[
+//         'class'=>'modules\demo\Module',
+//     ]
 ];

@@ -12,9 +12,9 @@ Yii 2 模块化应用模板
 	webroot/
 		|--- assets/					包含Assets的定义
 		|--- commands/					包含控制台命令
-		|--- config/					全局配置文件
+		|--- config/					配置文件（初始化环境时创建）
 		|--- modules/					模块代码目录
-		|		|--- demo/				示例模块（demo）
+		|		|--- demo/				示例模块（demo，开发环境下创建）
 		|		|		|--- controllers/
 		|		|		|--- views/
 		|		|		|--- models/
@@ -51,6 +51,15 @@ Yii 2 模块化应用模板
 
 如果你还没有安装[Composer](http://www.phpcomposer.com/), 你需要先依照[Composer安装文档](http://docs.phpcomposer.com/00-intro.html#Installation-*nix)的指示安装Composer。
 
+安装完依赖包之后，你还要执行一下以下初始化命令以将你的环境相关的配置代码正确初始化：
+
+	cd /path/to/basic
+	php init.php
+
+然后，根据提示操作即可。
+
+关于初始化环境可见『初始化环境』章节。
+
 然后，你可以在浏览器中输入如下URL访问示例了。
 
 	http://localhost/basic/web/
@@ -63,15 +72,87 @@ Yii 2 模块化应用模板
 	composer global require "fxp/composer-asset-plugin:~1.0.0"
 	composer create-project --prefer-dist --stability=dev hustnaive/yii2-app-modular basic
 
-然后，你可以在浏览器中输入如下URL访问示例了。
+同上，在代码下载安装完毕之后，你还需要初始化环境：
 
+安装完依赖包之后，你还要执行一下以下初始化命令以将你的环境相关的配置代码正确初始化：
+
+	cd /path/to/basic
+	php init.php
+
+
+然后，你可以在浏览器中输入如下URL访问示例了。
 
 	http://localhost/basic/web/
 
 
 
-配置
+初始化环境
 -------------
+
+这里，我们假设环境有'dev' - 本地开发环境、'prod'- 生产环境，当然，你也可以根据自己的需要增加其他的环境。
+
+环境相关的文件放在environments目录里面，以环境名命名的目录。比如模板的environments目录结构如下：
+
+	/path/to/basic
+		|--- ...
+		|--- environment/
+				|--- dev/
+						|--- ...
+				|--- prod/
+						|--- ...
+				|--- initconf.php
+
+当我们执行`php init.php`时，环境初始化代码会读取environment/initconf.php，并根据配置来讲当前代码环境切换为对应的环境配置。
+
+initconf.php的配置示例如下：
+
+	<?php
+	return [
+	    'Development' => [
+	        'path' => 'dev',
+	        'setWritable' => [
+	            'runtime',
+	            'web/assets',
+	        ],
+	        'setExecutable' => [
+	            'yii',
+	            'tests/codeception/bin/yii',
+	        ],
+	        'setCookieValidationKey' => [
+	            'config/web.php',
+	        ],
+	    ],
+	    'Production' => [
+	        'path' => 'prod',
+	        'setWritable' => [
+	            'runtime',
+	            'web/assets',
+	        ],
+	        'setExecutable' => [
+	            'yii',
+	            'tests/codeception/bin/yii',
+	        ],
+	        'setCookieValidationKey' => [
+	            'config/web.php',
+	        ],
+	    ],
+	];
+
+里面是$enviroment => $envconf形式的数组，其中$envconf里面的path代表对应环境有关的代码文件的存储路径，初始化过程会把里面的代码文件拷贝到应用根目录并根据操作覆盖。
+
+所以，对于与环境有关的代码，比如数据库配置等，你需要把文件按照根目录其的位置放在对应的环境目录里。
+
+比如，范例的dev环境：
+	
+	environments/dev/
+		|--- config/
+		|--- web/
+		|--- modules/
+
+在初始化时，会依次新建/覆盖根目录下的对应文件，这样，当我们需要修改配置代码的时候，只需要对应修改环境代码即可。
+
+>注意：这样，config,web,modules会放在.gitignore里，以避免你讲其提交了。
+
 
 ### Database
 
