@@ -29,6 +29,8 @@ phpunit.phar
 # Files enviroment related would be ignored and would be create by `php init.php` 
 /config
 /web/index.php
-
-# no matther in whatever env , the demo module should be ignored
 /modules/demo
+/tests/codeception.yml
+/tests/codeception/unit.suite.yml
+/tests/codeception/functional.suite.yml
+/tests/codeception/acceptance.suite.yml
