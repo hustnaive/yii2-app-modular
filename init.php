@@ -117,6 +117,11 @@ function copyFile($root, $source, $target, &$all, $params)
             echo "  unchanged $target\n";
             return true;
         }
+        else {
+            //如果内容产生了变化，将老文件备份，格式为 xxx.php-Ymd
+            file_put_contents($root.'/'.$target.date("-YmdHis",filemtime($root.'/'.$target)), file_get_contents($root . '/' . $target));
+        }
+        
         if ($all) {
             echo "  overwrite $target\n";
         } else {
