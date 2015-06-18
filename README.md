@@ -151,7 +151,7 @@ initconf.php的配置示例如下：
 
 在初始化时，会依次新建/覆盖根目录下的对应文件，这样，当我们需要修改配置代码的时候，只需要对应修改环境代码即可。
 
->注意：这里，config,web,modules会放在.gitignore里，以避免你讲其提交了。
+>注意：这里，config,web,modules会放在.gitignore里，以避免你讲其提交了。本部分的思想来源于[Yii 2 Advanced Project Template](https://github.com/yiisoft/yii2-app-advanced)。
 
 
 ### Database
