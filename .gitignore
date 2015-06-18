@@ -25,3 +25,7 @@ composer.phar
 phpunit.phar
 # local phpunit config
 /phpunit.xml
+
+# Files enviroment related would be ignored and would be create by `php init.php` 
+/config
+/web/index.php
