@@ -42,7 +42,7 @@ class SiteController extends Controller
             ],
             'captcha' => [
                 'class' => 'yii\captcha\CaptchaAction',
-                'fixedVerifyCode' => YII_ENV == 'dev' ? 'testme' : null,
+                'fixedVerifyCode' => YII_ENV == 'dev' || YII_ENV == 'test' ? 'testme' : null,
             ],
         ];
     }
