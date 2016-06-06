@@ -47,6 +47,7 @@ Yii 2 模块化应用模板
 然后，你还需要执行以下命令安装vendor里面的扩展包：
 
 	cd /path/to/basic
+	composer global require "fxp/composer-asset-plugin:~1.1.1"
 	composer install
 
 如果你还没有安装[Composer](http://www.phpcomposer.com/), 你需要先依照[Composer安装文档](http://docs.phpcomposer.com/00-intro.html#Installation-*nix)的指示安装Composer。
@@ -69,7 +70,7 @@ Yii 2 模块化应用模板
 如果你已经安装了Composer，你可以通过执行如下命令安装:
 
 	cd /path/to/webroot
-	composer global require "fxp/composer-asset-plugin:~1.0.0"
+	composer global require "fxp/composer-asset-plugin:~1.1.1"
 	composer create-project --prefer-dist --stability=dev hustnaive/yii2-app-modular basic
 
 同上，在代码下载安装完毕之后，你还需要初始化环境：
