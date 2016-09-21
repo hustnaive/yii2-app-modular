@@ -71,7 +71,7 @@ Yii 2 模块化应用模板
 
 	cd /path/to/webroot
 	composer global require "fxp/composer-asset-plugin:~1.1.1"
-	composer create-project --prefer-dist --stability=dev hustnaive/yii2-app-modular basic
+	composer create-project --prefer-dist --stability=dev "hustnaive/yii2-app-modular:1.1" basic
 
 同上，在代码下载安装完毕之后，你还需要初始化环境：
 
