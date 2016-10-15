@@ -44,13 +44,15 @@ Yii 2 模块化应用模板
 
 点击[Download Zip](https://github.com/hustnaive/yii2-app-modular/archive/master.zip)链接下载安装包，并解压到本地web根目录下的`basic`。
 
-然后，你还需要执行以下命令安装vendor里面的扩展包：
+然后，你还需要执行以下命令安装vendor里面的依赖包：
 
 	cd /path/to/basic
 	composer global require "fxp/composer-asset-plugin:~1.1.1"
 	composer install
 
 如果你还没有安装[Composer](http://www.phpcomposer.com/), 你需要先依照[Composer安装文档](http://docs.phpcomposer.com/00-intro.html#Installation-*nix)的指示安装Composer。
+
+如果你在国内，请参考[Composer中文镜像站](http://pkg.phpcomposer.com/)的指引配置Composer。
 
 安装完依赖包之后，你还要执行一下以下初始化命令以将你的环境相关的配置代码正确初始化：
 
@@ -84,7 +86,6 @@ Yii 2 模块化应用模板
 然后，你可以在浏览器中输入如下URL访问示例了。
 
 	http://localhost/basic/web/
-
 
 
 初始化环境
